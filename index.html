@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אלופת הכפל</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <h1>אלופת הכפל</h1>
+    <table>
+        <tbody class="mult-table"></tbody>
+    </table>
+    <dialog>
+        <form onsubmit="event.preventDefault();onAns()">
+            <h2>
+                <span></span>
+                <input type="number" autofocus />
+            </h2>
+            <button hidden>ש-גר</button>
+        </form>
+    </dialog>
+
+    <img src="img/broken.png" class="broken" />
+    <img src="img/explode.gif" class="explode" />
+
+    <footer>
+        <button onclick="onRestart()" class="btn-restart">🗑</button>
+        <select onchange="onSelectLevel(+this.value)" >
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+        </select>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
